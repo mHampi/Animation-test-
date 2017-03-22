@@ -1,0 +1,181 @@
+.buttons {
+    width: 100%;
+}
+
+#cat {
+    margin-top: 30px;
+    width: 150px;
+    display: block;
+}
+
+#dog {
+    margin-top: 40px;
+    width: 300px;
+    display: block;
+}
+
+.headbutt {
+    animation: headbutt 3s 1;
+}
+
+@keyframes headbutt {
+    o% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-10deg);
+    }
+    20% {
+        transform: rotate(50deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.move {
+    animation: moveForward 3s 1;
+}
+
+@keyframes moveForward {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 3000px;
+    }
+}
+
+.jump {
+    animation: jump 2s 1;
+}
+
+@keyframes jump {
+    0% {
+        margin-top: 40px;
+    }
+    50% {
+        margin-top: -150px;
+    }
+    100% {
+        margin-top: 40px;
+    }
+}
+
+.jumping {
+    animation: jumping 1s infinite;
+}
+
+@keyframes jumping {
+    0% {
+        margin-top: 40px;
+    }
+    50% {
+        margin-top: -200px;
+    }
+    100% {
+        margin-top: 40px;
+    }
+}
+
+.shake {
+    animation: shake 0.1s 10;
+}
+
+@keyframes shake {
+    o% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.moveTo30 {
+    animation: ease-out moveTo30 2s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveTo30 {
+    0% {
+        margin-left: -3000px;
+    }
+    100% {
+        margin-left: 30%;
+    }
+}
+
+.moveFrom30 {
+    animation: ease-in moveFrom30 2s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveFrom30 {
+    0% {
+        margin-left: 30%;
+    }
+    100% {
+        margin-left: 120%;
+    }
+}
+
+.fade {
+    animation: fade 3s 1;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fallDown {
+    animation: ease-in fallDown 2s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fallDown {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.glow {
+    animation: glow 0.8s 10;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*
+.dogHasBeenHit {
+    animation: dogHasBeenHit 3s;
+}
+
+@keyframes dogHasBeenHit {
+    to {
+        transform: translate(100vw);
+    }
+}*/

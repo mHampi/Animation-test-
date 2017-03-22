@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> ani test 1</title>
+  <style>
+    #man {
+      width: 12px;
+      height: 160px;
+      background-image: url(images/walk_sprite.png);
+      animation: walk 1s steps(8) infinite;
+    }
+
+    #wrap {
+      padding-top: 90px;
+      background-image: url(images/tree_grass.gif);
+      animation: move_bg 6s infinite linear;
+    }
+
+    @keyframes walk {
+      to {
+        background-position: -960px;
+      }
+    }
+
+    @keyframes move_bg {
+      to {
+        background-position: -400px;
+        padding-left: 100%;
+      }
+    }
+
+    div: hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="man"></div>
+  </div>
+</body>
+
+</html>

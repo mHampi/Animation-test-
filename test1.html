@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> ani test 1</title>
+  <style>
+    div {
+      margin: 5em;
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      animation: move 5s alternate 2;
+    }
+
+    @keyframes move {
+      0% {
+        width: 150px;
+        height: 150px;
+      }
+      25% {
+        transform: translate(300px);
+        background-color: blue;
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+      }
+      50% {
+        transform: translate(300px, 500px) rotate(20deg);
+        width: 150px;
+        height: 150px;
+        background-color: yellow;
+        border-radius: 20%;
+      }
+      75% {
+        transform: translate(0, 500px) rotate(60deg);
+        background-color: green;
+        width: 150px;
+        height: 150px;
+      }
+      100% {
+        transform: translate(0, 0) rotate(90deg);
+        width: 150px;
+        height: 150px;
+        background-color: purple;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="thing1"></div>
+</body>
+
+</html>

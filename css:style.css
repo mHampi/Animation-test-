@@ -1,0 +1,13 @@
+.awesome{
+  animation: cool 3s alternate infinite;
+}
+
+.highlight {
+  
+}
+
+@@keyframes cool {
+  to{
+    transition: translate(90vw);
+  }
+}
