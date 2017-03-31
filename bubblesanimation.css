@@ -1,0 +1,145 @@
+/*animation Setting*/
+
+#bubble1 {
+    position: absolute;
+    width: 200px;
+    left: 10%;
+    margin-top: 800px;
+}
+
+#bubble2 {
+    position: absolute;
+    width: 400px;
+    left: 20%;
+    margin-top: 500px;
+}
+
+#bubble3 {
+    position: absolute;
+    width: 100px;
+    left: 30%;
+    margin-top: 550px;
+}
+
+#bubble4 {
+    position: absolute;
+    width: 150px;
+    left: 15%;
+    margin-top: 630px;
+}
+
+#bubble5 {
+    position: absolute;
+    width: 300px;
+    left: 450%;
+    margin-top: 590px;
+}
+
+#bubble6 {
+    position: absolute;
+    width: 230px;
+    left: 40%;
+    margin-top: 490px;
+}
+
+#bubble7 {
+    position: absolute;
+    width: 50px;
+    left: 55%;
+    margin-top: 320px;
+}
+
+#bubble8 {
+    position: absolute;
+    width: 70px;
+    left: 60%;
+    margin-top: 530px;
+
+}
+#bubble9 {
+    position: absolute;
+    width: 300px;
+    left: 68%;
+    margin-top: 400px;
+
+}
+#bubble10 {
+    position: absolute;
+    width: 120px;
+    left: 25%;
+    margin-top: 520px;
+
+}
+#bubble11 {
+    position: absolute;
+    width: 200px;
+    left: 30%;
+    margin-top: 310px;
+
+}
+#bubble12 {
+    position: absolute;
+    width: 340px;
+    left: 0%;
+    margin-top: 390px;
+
+}
+#bubble13 {
+    position: absolute;
+    width: 210px;
+    left: 63%;
+    margin-top: 290px;
+
+}
+#bubble14 {
+    position: absolute;
+    width: 160px;
+    left: 17%;
+    margin-top: 190px;
+
+}
+#bubble15 {
+    position: absolute;
+    width: 310px;
+    left: 72%;
+    margin-top: 140px;
+
+}
+.bubbles_goingup {
+    animation: bubbles_goingup 10s cubic-bezier(0.47, 0, 0.745, 0.715) 7s  1;
+    -webkit-animation: bubbles_goingup 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s 1;
+    bottom: -20%;
+overflow: hidden;
+}
+
+@keyframes bubbles_goingup {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateY(-1000px);
+    }
+}
+
+webkit-keyframes bubbles_goingup {
+    0% {
+        -webkit-transform: translateY(0px);
+    }
+    20% {
+        transform: translateX(10px);
+    }
+    40% {
+        transform: translateY(20px);
+    }
+
+    80% {
+        transform: translateY(300px);
+    }
+    100% {
+        -webkit-transform: translateY(-1000px);
+        opacity: 0;
+    }
+}

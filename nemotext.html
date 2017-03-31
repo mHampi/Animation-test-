@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nemo Title</title>
+</head>
+
+<body>
+  <audio id="beyondthesea" preload="auto">
+    <source src="sound/beyondthesea.mp3">
+        </audio>
+
+  <img id="background" src="img/ocean.jpg">
+
+
+  <div id="img-container">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.63 50.77"><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M18.7,1.3H16.91V50.41H12.3L3.59,11.18V49.11H5.38v1.3H0v-1.3H1.79V1.3H0V0H7.28l7.84,35V1.3H13.32V0H18.7Z"/><path d="M37.86,43.42a6.83,6.83,0,0,1-2.3,5.22,8.24,8.24,0,0,1-5.82,2.13,8.3,8.3,0,0,1-5.84-2.13,6.81,6.81,0,0,1-2.32-5.22V20a6.81,6.81,0,0,1,2.32-5.22,8.31,8.31,0,0,1,5.84-2.13,8.24,8.24,0,0,1,5.82,2.13A6.83,6.83,0,0,1,37.86,20v12.3H27.21V46.58q0,2.88,2.53,2.88t2.5-2.88V39h5.63ZM32.24,31V16.8q0-2.88-2.5-2.88T27.21,16.8V31Z"/><path d="M70.17,50.41H62.75V16.8q0-2.74-2.07-2.74a4.56,4.56,0,0,0-3.23,1.72,8.38,8.38,0,0,1,.63,3.45V49.11h1.79v1.3H52.49V16.8q0-2.74-2.11-2.74a3.66,3.66,0,0,0-2.6,1.23V49.11h1.83v1.3H40.36v-1.3h1.83V14.27H40.36V13h7.42v1A6.16,6.16,0,0,1,52,12.62q3.48,0,5,2.14a7.21,7.21,0,0,1,5.31-2.14q6.12,0,6.12,6.61V49.11h1.79Z"/><path d="M88.63,43.42a6.83,6.83,0,0,1-2.3,5.22,9,9,0,0,1-11.65,0,6.81,6.81,0,0,1-2.32-5.22V20a6.81,6.81,0,0,1,2.32-5.22,9,9,0,0,1,11.65,0A6.83,6.83,0,0,1,88.63,20ZM83,46.58V16.8q0-2.88-2.5-2.88T78,16.8V46.58q0,2.88,2.53,2.88T83,46.58Z"/></g></g>
+      </svg>
+    </a>
+
+  </div>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #img-container {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+    }
+
+    svg {
+      position: absolute;
+      stroke: white;
+      fill: rgba(0, 0, 0, 0.4);
+      stroke-width: 0.5px;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: draw 15s alternate forwards;
+    }
+
+    .draw {
+      animation: 15s 1;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    /*#img-container {}*/
+
+    #background {
+      position: absolute;
+      background-image: url("img/ocean.jpg");
+      float: left;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .fade {
+      animation: fade 3s 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fade {
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <script>
+    let audioBeyondThesea = document.querySelector("audio#beyondthesea");
+    audioBeyondThesea.play();
+    audioBeyondThesea.volume = 0.5;
+
+    function play() {
+      beyondthesea.play();
+    }
+
+    let svg = document.querySelector("#img-container");
+
+    svg.addEventListener("click", fade);
+
+    function fade() {
+      svg.classList.add("fade");
+    }
+  </script>
+</body>
+
+</html>

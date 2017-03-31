@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive</title>
+
+  </head>
+
+  <body>
+
+    <div id="img-shells-container">
+
+      <h1>
+        Pick 3 shells
+      </h1>
+
+      <img class="img-shell" src="img/shell1.png">
+      <img class="img-shell" src="img/shell2.png">
+      <img class="img-shell" src="img/shell3.png">
+      <img class="img-shell" src="img/shell4.png">
+      <img class="img-shell" src="img/shell5.png">
+
+    </div>
+
+    <audio id="water" preload="audio">
+      <source src="sound/clap.mp3">
+    </audio>
+    <style>
+      #img-shells-container {
+        width: 1000px;
+        height: 600px;
+        position: relative;
+      }
+
+      h1 {
+        margin-top: 20px;
+        margin-left: 25%;
+        color: rgba(0, 0, 0, .7);
+        font-size: 80px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .img-shell {
+        margin-top: 350px;
+        margin-left: 100px;
+        width: 80px;
+        height: 60px;
+        display: inline-flex;
+        align-content: space-between;
+      }
+
+      .fade {
+        opacity: 0.2;
+      }
+
+    </style>
+
+    <script>
+      let imgs = document.querySelectorAll('.img-shell');
+      let waterSound = document.querySelector('#water');
+
+      let imgsClicked = 0;
+
+      imgs.forEach(addEvl);
+
+      function addEvl(img) {
+        img.addEventListener("click", imgClicked);
+      }
+
+      function imgClicked() {
+        this.classList.add("fade");
+        let picked = document.querySelectorAll('.fade');
+        if (picked.length == 3) {
+          console.log("3 clicked");
+          waterSound.play();
+        }
+      }
+    </script>
+  </body>
+
+</html>

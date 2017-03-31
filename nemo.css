@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+svg {
+    stroke: #DFF1F7;
+    fill: rgba(0, 0, 0, 0.3);
+    stroke-width: 5px;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    animation: draw ease-in 7s alternate forwards;
+    width: 500px;
+}
+
+#btnstart {
+    position: absolute;
+    display: none;
+    border: 5px solid transparent;
+    background: rgba(173, 216, 230, 0.4);
+    color: rgb(16, 59, 94);
+    padding: 15px 10px;
+    font-size: 2rem;
+    width: 350px;
+    font-weight: bold;
+    font-family: 'Luckiest Guy', cursive;
+    cursor: pointer;
+}
+
+#background {
+    position: absolute;
+    float: left;
+    margin-top: auto;
+    width: 100%;
+}
+
+#svg-container {
+    position: absolute;
+    z-index: 10;
+    left: 25%;
+    top: 25%;
+    cursor: pointer;
+}
+
+#nemo {
+    display: none;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 300px;
+    width: 150px;
+}
+
+#dory {
+    display: none;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 500px;
+    width: 150px;
+}
+
+#bubbles {
+    display: none;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 400px;
+    width: 200px;
+}
+
+
+/* Title appears, then fades out */
+
+.draw {
+    animation: draw 6s forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+    animation-timing-function: ease-in-out;
+}
+
+.fade {
+    animation: fade 3s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+#btnstart.btnappears {
+    display: block;
+    animation: 3s 1;
+    animation-fill-mode: ease-in-out forwards;
+}
+
+@keyframes btnappears {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+#bubbles.bubblesappears {
+    display: block;
+    animation: 7s 1;
+    animation-fill-mode: ease-in-out forwards;
+}
+
+@keyframes btnappears {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+
+/* Dory comes */
+
+#dory.dorymoves {
+    display: block;
+    animation: dorymoves 8s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dorymoves {
+    0% {
+        transform: perspective(500px) translate3d(1900px, 0px, -700px);
+        animation-timing-function: ease-in-out;
+    }
+    60% {
+        transform: perspective(500px) translate3d(300px, 10px, -450px);
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: perspective(500px) translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+/* Bubbles animation */
+
+#bubbles.move {
+    display: block;
+    animation: bubblesGoingUp 10s 1;
+    /** animation stops once the last keyframe has completed **/
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubblesGoingUp {
+    0% {
+        /** function translated3d moves the position of the element in the 3D space **/
+        transform: perspective(500px) translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    10% {
+        transform: perspective(500px) translate3d(0px, -20px, 0px);
+        animation-timing-function: ease-out;
+    }
+    20% {
+        transform: perspective(500px) translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: perspective(500px) translate3d(0px, -150px, -100px);
+        animation-timing-function: ease-out;
+    }
+    70% {
+        transform: perspective(500px) translate3d(3px, -250px, -180px);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: perspective(500px) translate3d(60px, -550px, -500px);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+/*Nemo animaion*/
+
+#nemo.nemocomes {
+    display: block;
+    animation: ease-in-out nemocomes 2s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nemocomes {
+    0% {
+        margin-left: -3000px;
+    }
+    100% {
+        margin-left: 150px;
+    }
+}
+
+#nemo.nemojumps {
+    display: block;
+    animation: ease-in-out nemojumps 2s 3;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nemojumps {
+    o% {
+        transform: perspective(500px);
+    }
+    50% {
+        transform: perspective(500px) rotate(-20deg) translate3d(400px, -100px, -400px);
+    }
+    100% {
+        transform: perspective(500px);
+    }
+}
+
+#nemo.picturesFade, #dory.picturesFade, #bubbles.picturesFade, #btnstart.picturesFade {
+    display: none;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+#img-shells-container {
+    position: relative;
+    text-align: center;
+    display: none;
+}
+
+#img-shells-container.shells-appear {
+    display: block;
+}
+
+#img-shells-container h1 {
+    text-align: center;
+    color: rgb(16, 59, 94);
+}
+
+.img-shell {
+    margin-top: 350px;
+    width: 80px;
+    display: inline-flex;
+    align-content: space-between;
+}
+
+.fade-shell {
+    opacity: 0.2;
+}
+
+#bubble1 {
+    width: 200px;
+    left: 10%;
+    margin-top: 800px;
+}
+
+#bubble2 {
+    width: 400px;
+    left: 20%;
+    margin-top: 500px;
+}
+
+#bubble3 {
+    width: 100px;
+    left: 30%;
+    margin-top: 550px;
+}
+
+#bubble4 {
+    width: 150px;
+    left: 15%;
+    margin-top: 630px;
+}
+
+#bubble5 {
+    width: 300px;
+    left: 450%;
+    margin-top: 590px;
+}
+
+#bubble6 {
+    width: 230px;
+    left: 40%;
+    margin-top: 490px;
+}
+
+#bubble7 {
+    width: 50px;
+    left: 55%;
+    margin-top: 320px;
+}
+
+#bubble8 {
+    width: 70px;
+    left: 60%;
+    margin-top: 530px;
+}
+
+#bubble9 {
+    width: 300px;
+    left: 68%;
+    margin-top: 400px;
+}
+
+#bubble10 {
+    width: 120px;
+    left: 25%;
+    margin-top: 520px;
+}
+
+#bubble11 {
+    width: 200px;
+    left: 30%;
+    margin-top: 310px;
+}
+
+#bubble12 {
+    width: 340px;
+    left: 0%;
+    margin-top: 390px;
+}
+
+#bubble13 {
+    width: 210px;
+    left: 63%;
+    margin-top: 290px;
+}
+
+#bubble14 {
+    width: 160px;
+    left: 17%;
+    margin-top: 190px;
+}
+
+#bubble15 {
+    width: 310px;
+    left: 72%;
+    margin-top: 140px;
+}
+
+.bubbles-goingup {
+    display: none;
+}
+
+.bubbles-goingup * {
+    position: absolute;
+}
+
+.bubbles-goingup.showbubbles {
+    display: block;
+    animation: bubbles_goingup forwards 10s 1;
+    bottom: -20%;
+    overflow: hidden;
+}
+
+@keyframes bubbles_goingup {
+    0% {
+        margin-top: 30%;
+    }
+    100% {
+        margin-top: -1000px;
+        opacity: 0;
+    }
+}
+
+.footer {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(16, 59, 94);
+}
