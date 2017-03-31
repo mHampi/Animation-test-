@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+
+  <style>
+    li {
+      cursor: pointer;
+      color: purple;
+      transition: 1s;
+    }
+
+    .crossout {
+      text-decoration: line-through;
+    }
+  </style>
+
+  <body>
+    <input type="text">
+    <button>Add item</button>
+</head>
+<h2>To do</h2>
+<ul id="list1">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ul>
+<script>
+  let lis = document.querySelector("li");
+  let list1 = document.querySelector("#list1");
+  let input = document.querySelector("input");
+  let btn = document.querySelector("button");
+
+  btn.addEventListener("click", addItem);
+
+  function addItem() {
+    console.log(input.value);
+    let newLi = document.createElement("li");
+    newLi.addEventListener("click", mark);
+    newLi.innerHTML = input.value;
+    list1.appendChild(newLi);
+  }
+
+  lis.forEach(funcion(i)) {
+    i.addEventListener("click", mark);
+  }
+
+  function mark() {
+    this.classList.toggle("crossout");
+  }
+</script>
+
+</body>
+
+</html>

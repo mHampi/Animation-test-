@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<style>
+  #a {
+    margin-top: 20px;
+    width: 150px;
+    float: left;
+  }
+
+  #b {
+    margin-top: 20px;
+    width: 150px;
+    float: left;
+  }
+
+  #c {
+    margin-top: 20px;
+    width: 150px;
+    float: left;
+  }
+
+  #d {
+    margin-top: 20px;
+    width: 150px;
+    float: left;
+  }
+
+  #e {
+    margin-top: 20px;
+    width: 150px;
+    float: left;
+  }
+
+  .fade {
+    opacity: 0.2;
+  }
+</style>
+
+<body>
+  <img id="a" src="images/flower.png">
+  <img id="b" src="images/flower.png">
+  <img id="c" src="images/flower.png">
+  <img id="d" src="images/flower.png">
+  <img id="e" src="images/flower.png">
+
+  <script>
+    let header = document.querySelector("h1");
+    let flowers = document.querySelector("img");
+    let flowersClicked = 0;
+    flowers.forEach(addEvl);
+
+    function addEvl(flower) {
+      flower.addEventListener("click", aFlowersClicked)
+    }
+
+    function aFlowersClicked() {
+      this.classList.add("fade");
+      let picked = document.querySelectorAll(".fade");
+      if (picked.length == 3) {
+        console.log("3 clicked");
+        header.innerHTML = "3 flowers picked";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

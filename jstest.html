@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrays</title>
+</head>
+<style>
+  p {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+    transition: 3s;
+  }
+
+  .hide {
+    text-decoration: line-through;
+    color: red;
+  }
+</style>
+
+<body>
+  <p>item 1</p>
+  <p>item 2</p>
+  <p>item 3</p>
+  <p>item 4</p>
+  <p>item 5</p>
+
+  <script>
+    let ps = document.querySelectorAll("p");
+    console.log(ps);
+
+    ps.forEach(loop);
+
+    function loop(p) {
+      console.log(p);
+      p.addEventListener("click", pClicked);
+    }
+
+
+    function pClicked() {
+      console.log(this);
+      this.classList.add("hide")
+    }
+  </script>
+
+</body>
+
+</html>

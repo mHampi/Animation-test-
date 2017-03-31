@@ -1,0 +1,29 @@
+#box {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+
+#box.halfway {
+    background-color: orange;
+}
+
+#box.halfway2 {
+  background-color: yellow;
+}
+
+#box.halfway3 {
+  background-color: green;
+}
+
+#box.halfway4 {
+  background-color: blue;
+}
+
+#box.halfway5 {
+  background-color: indigo;
+}
+
+#box.halfway6 {
+  background-color: violet;
+}

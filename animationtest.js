@@ -91,6 +91,21 @@ function glow() {
   dog.classList.toggle("glow");
 }
 
+var meow = document.querySelector("#meow")
+var meow = document.querySelector("#meow")
+let sound = document.querySelector("#sound")
+sound.addEventListener("click", play)
+meow.addEventListener("ended", doSomething)
+
+function play() {
+  meow.play();
+}
+
+function doSomething() {
+  console.log("meow");
+  meow.play();
+}
+
 
 
 
